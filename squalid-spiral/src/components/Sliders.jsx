@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import React from "react";
 import Slider from "react-slick";
 
-import foto1 from '../Assets/ParadisoMusicLogo.png'
+import foto1 from '../assets/ParadisoMusicLogo.png'
 
 
 export default function SimpleSlider() {
@@ -16,7 +16,7 @@ export default function SimpleSlider() {
     slidesToScroll: 1,
   };
   return (
-    <Slider {...settings}>
+    <Slider  {...settings}>
       <div>
         <img class='w-40 h-40' src={foto1.src} alt="foto" />
       </div>

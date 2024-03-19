@@ -2,13 +2,19 @@
 
 import Layout from '../layouts/Layout.astro';
 import SimpleSlider from '../components/Sliders.jsx'
+import Services from '../components/Services.astro'
 
 import "slick-carousel/slick/slick.css"; 
 ---
 
 <Layout title="Paradiso Music">
 	<main>
+		<div class="p6 bg-white container mx-auto h-full">
 		<SimpleSlider client:only="react" />
+		</div>
+		<div>
+			<Services />
+		</div>
 	</main>
 </Layout>
 
