@@ -1,7 +1,11 @@
 ---
+
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import SimpleSlider from '../components/Sliders.jsx'
+
+import "slick-carousel/slick/slick.css"; 
 ---
+
 
 <Layout title="Welcome to ParadisoMusic">
 	<main>
@@ -114,3 +118,10 @@ import Card from '../components/Card.astro';
 		padding: 0;
 	}
 </style>
+<Layout title="Paradiso Music">
+	<main>
+		<SimpleSlider client:only="react" />
+	</main>
+</Layout>
+
+
