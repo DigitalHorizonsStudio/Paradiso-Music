@@ -1,14 +1,5 @@
 ---
-
-import Layout from '../layouts/Layout.astro';
-import SimpleSlider from '../components/Sliders.jsx'
-
-import "slick-carousel/slick/slick.css"; 
+import App from '../components/pages/app.astro'
 ---
 
-<Layout title="Paradiso Music">
-	<main>
-		<SimpleSlider client:only="react" />
-	</main>
-</Layout>
-
+<App/>
