@@ -1,0 +1,40 @@
+---
+import '@fontsource-variable/montserrat';
+import enterteinment from '../assets/enterteinment.png'
+import rental from '../assets/rental.png'
+import lighting from '../assets/lighting.png'
+import liveSound from '../assets/liveSound.png'
+import stage from '../assets/stage.png'
+import video from '../assets/video.png'
+
+---
+<div class="bg-white min-h-screen flex flex-col justify-evenly items-center md: p-10" >
+    <h1 class="text-6xl text-black xl: mb-10 xl: mt-10" style={{fontFamily: 'montserrat'}}>Transform your miami events</h1>
+    <div class="grid grid-cols-3 gap-8">
+        <div class="relative">
+            <img src={stage.src} alt="Staging" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Staging</h2>
+        </div>
+        <div class="relative">
+            <img src={enterteinment.src} alt="Entretainment" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Entretainment</h2>
+        </div>
+        <div class="relative">
+            <img src={video.src} alt="Video" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Video</h2>
+        </div>
+        <div class="relative">
+            <img src={lighting.src} alt="Lighting" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Lighting</h2>
+        </div>
+        <div class="relative">
+            <img src={rental.src} alt="Equipment Rental" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Equipment Rental</h2>
+        </div>
+        <div class="relative">
+            <img src={liveSound.src} alt="Live Sound" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Live Sound</h2>
+        </div>
+    </div>
+</div>
+

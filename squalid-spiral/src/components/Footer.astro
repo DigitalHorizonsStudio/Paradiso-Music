@@ -1,0 +1,46 @@
+---
+import ParadisoLogo from '../assets/ParadisoMusicLogo.png'
+import Facebook from '../assets/Footer/facebook.png'
+import Instagram from '../assets/Footer/instagram.png'
+import Linkedin from '../assets/Footer/linkedin.png'
+import Youtube from '../assets/Footer/youtube.png'
+
+---
+
+<footer class="bg-black h-2/3 flex flex-col justify-center items-center pt-8 pb-8 xl: w-100">
+    <div class="container xl:w-2/3 flex xl: flex-row xl:flex-row items-center justify-between">
+      <div class="flex flex-col items-center mb-4 md:mb-0">
+        <img src={ParadisoLogo.src} alt="Logo" class="w-24 h-24" />
+      </div>
+      <div class="flex flex-row">
+      <div class="flex flex-col mb-4 md:mb-0 pr-8">
+        <h3 class="font-bold text-lg mb-2">Enlaces</h3>
+        <ul class="list-none text-sm">
+          <li><a href="#">Página de inicio</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col mb-4 md:mb-0">
+        <h3 class="font-bold text-lg mb-2">Servicios</h3>
+        <ul class="list-none text-sm">
+          <li><a href="#">Servicio 1</a></li>
+          <li><a href="#">Servicio 1</a></li>
+          <li><a href="#">Servicio 1</a></li>
+          <li><a href="#">Servicio 1</a></li>
+        </ul>
+      </div>
+    </div>
+      <div class="flex flex-col items-center" style={{marginTop: '5.5rem'}}>
+        <ul class="flex flex-row justify-center">
+          <li><a href="#"><img src={Facebook.src} alt="Facebook" class="w-6 h-6 mx-2" /></a></li>
+          <li><a href="#"><img src={Instagram.src} alt="Instagram" class="w-6 h-6 mx-2" /></a></li>
+          <li><a href="#"><img src={Linkedin.src} alt="Linkedin" class="w-6 h-6 mx-2" /></a></li>
+          <li><a href="#"><img src={Youtube.src} alt="Youtube" class="w-6 h-6 mx-2" /></a></li>
+
+        </ul>
+      </div>
+      
+    </div>
+  </footer>

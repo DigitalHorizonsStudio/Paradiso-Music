@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
+import "@fontsource/montserrat";
 
 import react from "@astrojs/react";
 

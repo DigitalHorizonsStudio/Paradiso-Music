@@ -1,40 +1,45 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from "react";
+import foto1 from '../assets/video.png';
+import foto2 from '../assets/liveSound.png';
+import foto3 from '../assets/stage.png';
 
-import React from "react";
-import Slider from "react-slick";
+export default function HomeSlider() {
+  const [currentPhoto, setCurrentPhoto] = useState(0); // Initial photo index
+  const photos = [foto1, foto2, foto3];
 
-import foto1 from '../Assets/ParadisoMusicLogo.png'
-
-
-export default function SimpleSlider() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+  const handlePrev = () => {
+    setCurrentPhoto(prevPhotoIndex => (prevPhotoIndex === 0 ? photos.length - 1 : prevPhotoIndex - 1));
   };
+
+  const handleNext = () => {
+    setCurrentPhoto(prevPhotoIndex => (prevPhotoIndex === photos.length - 1 ? 0 : prevPhotoIndex + 1));
+  };
+
   return (
-    <Slider {...settings}>
-      <div>
-        <img class='w-40 h-40' src={foto1.src} alt="foto" />
+    <div className="bg-white relative" style={{ height: '30rem', position: 'relative' }}>
+      <div className="w-full h-full overflow-hidden">
+        <img
+          className="w-full h-full object-cover transition duration-500 ease-in-out transform"
+          src={photos[currentPhoto].src}
+          alt={`Photo ${currentPhoto + 1}`}
+          style={{ position: 'absolute', top: 0, left: 0 }}
+        />
       </div>
-      <div>
-      <h3>2</h3>
+      <button className="absolute top-1/2 left-0 transform -translate-y-1/2" onClick={handlePrev}>
+        Previous
+      </button>
+      <button className="absolute top-1/2 right-0 transform -translate-y-1/2" onClick={handleNext}>
+        Next
+      </button>
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+        {photos.map((photo, index) => (
+          <div
+            key={index}
+            className={`w-2 h-2 mx-1 rounded-full cursor-pointer ${index === currentPhoto ? 'bg-gray-900' : 'bg-gray-300'}`}
+            onClick={() => setCurrentPhoto(index)}
+          />
+        ))}
       </div>
-      <div>
-      <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
+    </div>
   );
 }
