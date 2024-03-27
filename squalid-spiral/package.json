@@ -12,7 +12,9 @@
   "dependencies": {
     "@astrojs/react": "^3.1.0",
     "@astrojs/tailwind": "^5.1.0",
-    "@types/react": "^18.2.66",
+    "@fontsource-variable/montserrat": "^5.0.18",
+    "@fontsource/montserrat": "^5.0.17",
+    "@types/react": "^18.2.72",
     "@types/react-dom": "^18.2.22",
     "astro": "^4.5.2",
     "bootstrap": "^5.3.3",
