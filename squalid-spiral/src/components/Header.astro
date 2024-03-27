@@ -12,15 +12,15 @@ import { useState } from 'react';
                 <img class="rounded-full w-16 h-16 object-contain" 
                 src={ParadisoMusicLogo.src} 
                 alt="logo">
-                <a href="/about us">ABOUT US</a>       
-                <a href="/services">SERVICES</a>
-                <a href="/events">EVENTS</a>
-                <a href="/contact us">CONTACT US</a>         
+                <a href={ getRelativeLocaleUrl(lang, 'about') } > { t("nav.about") }</a>       
+                <a href={ getRelativeLocaleUrl(lang, 'services')} > { t("nav.services")}</a>
+                <a href={ getRelativeLocaleUrl(lang, 'events') } > { t("nav.events")}</a>
+                <a href={ getRelativeLocaleUrl(lang, 'contact') } > { t("nav.contact")}</a>         
             </nav>
         </div>
         <div class="ml-auto mr-20">
-            <span >En-Es</span>
+            <span ><LanguagePicker/></span>
         </div>
-    </header>
+    </header>    
 </div>
 
