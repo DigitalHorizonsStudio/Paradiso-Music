@@ -1,5 +1,5 @@
 ---
-import ParadisoMusicLogo from '../assets/ParadisoMusicLogo.png'
+import ParadisoMusicLogo from '../Assets/ParadisoMusicLogo.png'
 import { useTranslations, getLangFromUrl, useTranslatedPath } from '../i18n/utils';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import LanguagePicker from './LanguagePicker.astro';
@@ -15,9 +15,10 @@ const t = useTranslations(lang);
     <header class="flex justify-between items-center py-5 w-full mx-auto">  
         <div class="flex items-center">
             <nav class="flex flex-row gap-x-5 items-center">
-                <img class="rounded-full w-16 h-16 object-contain" 
-                src={ParadisoMusicLogo.src} 
-                alt="logo">
+               <a href={getRelativeLocaleUrl(lang, '/')}>
+                   <img class="rounded-full w-16 h-16 object-contain" 
+                   src={ParadisoMusicLogo.src} 
+                   alt="logo"></a>
                 <a href={ getRelativeLocaleUrl(lang, 'about') } > { t("nav.about") }</a>       
                 <a href={ getRelativeLocaleUrl(lang, 'services')} > { t("nav.services")}</a>
                 <a href={ getRelativeLocaleUrl(lang, 'events') } > { t("nav.events")}</a>

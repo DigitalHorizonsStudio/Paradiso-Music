@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import foto1 from '../assets/video.png';
-import foto2 from '../assets/liveSound.png';
-import foto3 from '../assets/stage.png';
+import foto1 from '../Assets/video.png';
+import foto2 from '../Assets/liveSound.png';
+import foto3 from '../Assets/stage.png';
 
 export default function HomeSlider() {
   const [currentPhoto, setCurrentPhoto] = useState(0); // Initial photo index
