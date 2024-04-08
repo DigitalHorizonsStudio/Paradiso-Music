@@ -1,7 +1,45 @@
 ---
-import App from '../../components/pages/app.astro'
+import Layout from '../../layouts/Layout.astro';
+import SimpleSlider from '../../components/Slider.astro'
+import Services from '../../components/Services.astro'
+import Partners from '../../components/Partners.jsx'
+import Footer from '../../components/Footer.astro'
+import ContactUs from '../../components/ContactUs.astro'
+
+import "slick-carousel/slick/slick.css"; 
 ---
 
-<App/>
+<Layout title="Paradiso Music">
+	<main>
+		<div class="p6 bg-black container mx-auto h-full">
+		<SimpleSlider/>
+		</div>
+		<div>
+			<Services />
+		</div>
+		<div>
+			<Partners />
+		</div>
+		<div>
+			<ContactUs client:load/>
+		</div>
+		<Footer />
+	</main>
+</Layout>
 
+<style>
+	h1, a {
+		font-family: 'Montserrat', serif;
+	}
+
+</style>
+
+<style is:global>
+	@font-face {
+		font-family: 'Montserrat';
+		src: url('/fonts/Montserrat-Medium.ttf') format("truetype");
+		font-style: normal;
+		font-display: swap;
+	}
+</style>
 
