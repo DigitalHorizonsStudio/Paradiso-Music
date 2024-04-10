@@ -7,34 +7,44 @@ import liveSound from '../Assets/liveSound.png'
 import stage from '../Assets/stage.png'
 import video from '../Assets/video.png'
 
+import { useTranslations, getLangFromUrl, useTranslatedPath } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 ---
 <div class="bg-white min-h-screen flex flex-col justify-evenly items-center md: p-10" >
     <h1 class="text-6xl text-black xl: mb-10 xl: mt-10" style={{fontFamily: 'montserrat'}}>Transform your miami events</h1>
     <div class="grid grid-cols-3 gap-8">
         <div class="relative">
+            <a href={ getRelativeLocaleUrl(lang, 'staging') }>
             <img src={stage.src} alt="Staging" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
-            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Staging</h2>
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Staging</h2></a>
         </div>
         <div class="relative">
+            <a href={ getRelativeLocaleUrl(lang, 'entertainment') }>
             <img src={enterteinment.src} alt="Entretainment" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
-            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Entretainment</h2>
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Entertainment</h2></a>
         </div>
         <div class="relative">
+            <a href={ getRelativeLocaleUrl(lang, 'video') }>
             <img src={video.src} alt="Video" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
-            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Video</h2>
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Video</h2></a>
         </div>
         <div class="relative">
+            <a href={ getRelativeLocaleUrl(lang, 'lighting') }>
             <img src={lighting.src} alt="Lighting" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
-            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Lighting</h2>
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Lighting</h2></a>
         </div>
         <div class="relative">
+            <a href={ getRelativeLocaleUrl(lang, 'rentalEquipment') }>
             <img src={rental.src} alt="Equipment Rental" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
-            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Equipment Rental</h2>
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Equipment Rental</h2></a>
         </div>
         <div class="relative">
+            <a href={ getRelativeLocaleUrl(lang, 'liveSound') }>
             <img src={liveSound.src} alt="Live Sound" class="mx-auto w-100 h-100 object-cover rounded-lg mb-2">
-            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Live Sound</h2>
+            <h2 class="absolute inset-0 flex items-center justify-center text-lg font-bold text-center bg-black bg-opacity-50 text-white rounded-lg uppercase">Live Sound</h2></a>
         </div>
     </div>
 </div>

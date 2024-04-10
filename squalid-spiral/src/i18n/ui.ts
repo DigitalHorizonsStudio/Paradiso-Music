@@ -9,15 +9,15 @@ export const languages = {
   
   export const ui = {
     en: {
-      'nav.about': 'About us',
-      'nav.services': 'Services',
-      'nav.events': 'Events',
-      'nav.contact': 'Contact us',
+      'nav.about': 'ABOUT US',
+      'nav.services': 'SERVICES',
+      'nav.events': 'EVENTS',
+      'nav.contact': 'CONTACT US',
     },
     es: {
-        'nav.about': 'Quienes somos',
-        'nav.services': 'Servicios',
-        'nav.events': 'Eventos',
-        'nav.contact': 'Contacto',
+        'nav.about': 'QUIENES SOMOS',
+        'nav.services': 'SERVICIOS',
+        'nav.events': 'EVENTOS',
+        'nav.contact': 'CONTACTO',
     },
   } as const;
